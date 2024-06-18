@@ -1,6 +1,6 @@
 using System;
 
-private class Job
+public class Job
 {
     public string _jobTitle;
     public string _company;
