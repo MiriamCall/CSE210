@@ -1,22 +1,18 @@
 using System;
+using System.Runtime.InteropServices;
 
 class Program
 {
-    static double CalculateCircleArea(double radius)
-{
-    double area = 0;
-    area = Math.PI * radius * radius;
-    return area;
-   
-}
-    static void Main(string[] args)
+    static void Main()
     {
-        Console.WriteLine("Hello Sandbox World!");
-        double area = CalculateCircleArea(10);
-        Console.WriteLine(area);
+        Console.WriteLine("Hello, World!");
+        
+        Circle myCircle = new Circle(10);
+        Console.WriteLine($"{myCircle.GetArea()}");
 
-        
-        
+        Circle unitCircle = new Circle(1);
+        Console.WriteLine($"{unitCircle.GetCircumference()}");
+        Console.WriteLine($"{unitCircle.GetDiameter()}");
     }
 
 
