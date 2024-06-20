@@ -5,7 +5,7 @@ class Menu
     private int choice = 0;
 
     private Journal _journal = new Journal();
-    private Entry entry = new Entry();
+    private Entry _entry = new Entry();
     
     public void DisplayMenu()
     {
@@ -23,14 +23,26 @@ class Menu
             switch (choice)
             {
                 case 1:
-                    Console.WriteLine($"_question");
+                // Add Entry
+                    _entry.MakeEntry();
+                    _entry.DisplayEntry();
+                    _journal.AddEntry(_entry);
                     break;
                 case 2:
+                // Display Entries
                     _journal.DisplayEntries();
                     break;
                 case 3:
+                // Save Journal
+                _journal.SaveJournal();
                 break;
                 case 4:
+                // Load Journal
+                _journal.LoadJournal();
+                break;
+                case 5:
+                // Exit
+                Environment.Exit(0);
                 break;
             }
         }
