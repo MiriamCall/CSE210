@@ -53,13 +53,13 @@ class Entry
 
     public void DisplayDate()
     {
-        
+        Console.WriteLine(_date);
     }
 
     // DisplayResponse method that displays the response.
     public void DisplayResponse()
     {
-        
+        Console.WriteLine(_response);  
     }
 
     // DisplayEntry method that displays the date, question, and response.
@@ -83,3 +83,9 @@ class Entry
     }
 
 }
+// Brother Goddridge read, and save file
+// public override string ToString()
+// {
+//     string outputString = "";
+//     outputString = $"{_date}#{_entryQuestion}#{_journalEntry}";
+// }
