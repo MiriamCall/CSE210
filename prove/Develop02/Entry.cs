@@ -45,11 +45,27 @@ class Entry
     // DisplayQuestion method that displays the question at the current question index.
     public void DisplayQuestion()
     {
-        foreach (string question in _questions)
-        {
-            Console.WriteLine(question);
-        }
+        GenerateRandomIndex();
+        Console.WriteLine(_questions[_questionIndex]);
     }
+
+
+
+    // Copilot response to how to save response to a specific question
+    // Dictionary to store questions and responses
+private Dictionary<string, string> _responses = new Dictionary<string, string>();
+
+// Method to get and save response
+public void GetAndSaveResponse()
+{
+    Console.WriteLine("Enter your response:");
+    string response = Console.ReadLine();
+    _responses[_questions[_questionIndex]] = response;
+}
+
+
+
+
 
     public void DisplayDate()
     {
