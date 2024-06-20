@@ -24,19 +24,22 @@ class Menu
             {
                 case 1:
                 // Add Entry
-                
+                    _entry.MakeEntry();
+                    _entry.DisplayEntry();
+                    _journal.AddEntry(_entry);
                     break;
                 case 2:
                 // Display Entries
-
+                    _journal.DisplayEntries();
                     break;
                 case 3:
                 // Save Journal
+                _journal.SaveJournal();
 
                 break;
                 case 4:
                 // Load Journal
-                
+                _journal.LoadJournal();
                 break;
                 case 5:
                 // Exit

@@ -5,12 +5,15 @@ class Journal
 
     public void AddEntry(Entry entry)
     {
-    
+        _entries.Add(entry);
     }
 
     public void DisplayEntries()
     {
-
+        foreach (Entry entry in _entries)
+        {
+            entry.DisplayEntry();
+        }
     }
     public void SaveJournal()
     {

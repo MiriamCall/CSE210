@@ -24,25 +24,31 @@ class Entry
     // AddDate method that sets the date to the current date and time.
     public void AddDate()
     {
-       
+        _date = DateTime.Now;
     }
 
     // AddResponse method that sets the response to the user's input.
     public void AddResponse()
     {
+        Console.WriteLine("Enter your response:");
+        _response = Console.ReadLine();
         
     }
 
     // GenerateRandomIndex method that generates a random question index.
     public void GenerateRandomIndex()
     {
-        
+        Random random = new Random();
+        _questionIndex = random.Next(0, _questions.Count);
     }
 
     // DisplayQuestion method that displays the question at the current question index.
     public void DisplayQuestion()
     {
-        
+        foreach (string question in _questions)
+        {
+            Console.WriteLine(question);
+        }
     }
 
     public void DisplayDate()
