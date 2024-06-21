@@ -2,29 +2,46 @@ using System;
 class Entry 
 {
     private List<string> _questions;
+    private string _question;
     private int _questionIndex;
 
     private string _response;
 
-    private DateTime _date;
+    private string _date;
 
     // Constructor for Entry. Initializes the list of questions.
     public Entry()
     {
-        _questions = new List<string>
-        {
+        _questions = LoadQuestions();
+
+    }
+
+    public Entry(string date, string question, string response)
+    {
+        _questions = LoadQuestions();   
+        _date = date;
+        _question = question;
+        _response = response;
+    }
+
+    private List<string> LoadQuestions()
+    {
+        List<string> questions = new List<string>()
+         {
             "Who was the most interesting person I interacted with today?",
             "What was the best part of my day?",
             "How did I see the hand of the Lord in my life today?",
             "What was the strongest emotion I felt today?",
             "If I had one thing I could do over today, what would it be?"
         };
+        return questions;
     }
 
     // AddDate method that sets the date to the current date and time.
     public void AddDate()
     {
-        _date = DateTime.Now;
+        DateTime currentDate = DateTime.Now;
+        _date = currentDate.ToShortDateString();
     }
 
     // AddResponse method that sets the response to the user's input.
@@ -49,19 +66,24 @@ class Entry
         Console.WriteLine(_questions[_questionIndex]);
     }
 
-
+    public override string ToString()
+    {
+        string outputString = "";
+        outputString = $"{_date}#{_question}#{_response}";
+        return outputString;
+    }
 
     // Copilot response to how to save response to a specific question
     // Dictionary to store questions and responses
-private Dictionary<string, string> _responses = new Dictionary<string, string>();
+    // private Dictionary<string, string> _responses = new Dictionary<string, string>();
 
-// Method to get and save response
-public void GetAndSaveResponse()
-{
-    Console.WriteLine("Enter your response:");
-    string response = Console.ReadLine();
-    _responses[_questions[_questionIndex]] = response;
-}
+    // // Method to get and save response
+    // public void GetAndSaveResponse()
+    // {
+    //     Console.WriteLine("Enter your response:");
+    //     string response = Console.ReadLine();
+    //     _responses[_questions[_questionIndex]] = response;
+    // }
 
 
 

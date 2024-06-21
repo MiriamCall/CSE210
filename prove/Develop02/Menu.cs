@@ -5,7 +5,6 @@ class Menu
     private int choice = 0;
 
     private Journal _journal = new Journal();
-    private Entry _entry = new Entry();
     
     public void DisplayMenu()
     {
@@ -23,6 +22,7 @@ class Menu
             switch (choice)
             {
                 case 1:
+                Entry _entry = new Entry();
                 // Add Entry
                     _entry.MakeEntry();
                     _entry.DisplayEntry();
@@ -34,12 +34,12 @@ class Menu
                     break;
                 case 3:
                 // Save Journal
-                _journal.SaveJournal();
+                _journal.SaveJournal("journal.txt");
 
                 break;
                 case 4:
                 // Load Journal
-                _journal.LoadJournal();
+                _journal.LoadJournal("Journal.txt");
                 break;
                 case 5:
                 // Exit
