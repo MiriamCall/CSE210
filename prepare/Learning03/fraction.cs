@@ -1,23 +1,24 @@
-public class fraction
+public class Fraction
 {
     private int _top;
     private int _bottom;
 
-    public fraction()
+
+    public Fraction()
     {
         _top = 1;
         _bottom = 1;
     }
 
-    public fraction(wholeNumber : int)
+    public Fraction(int wholeNumber)
     {
         _top = wholeNumber;
         _bottom = 1;
     }
 
-    public fraction(typeof : int, bottom : int)
+    public Fraction(int top, int bottom)
     {
-        _top = typeof;
+        _top = top;
         _bottom = bottom;
     }
 
@@ -26,9 +27,9 @@ public class fraction
         return _top;
     }
 
-    public void SetTop(typeof : int)
+    public void SetTop(int top)
     {
-        _top = typeof;
+        _top = top;
     }
 
     public int GetBottom()
@@ -36,7 +37,7 @@ public class fraction
         return _bottom;
     }
 
-    public void SetBottom(bottom : int)
+    public void SetBottom(int bottom)
     {
         _bottom = bottom;
     }
@@ -49,6 +50,7 @@ public class fraction
     public double GetDecimalValue()
     {
         return (double)_top / (double)_bottom;
+       
     }
 
 }
