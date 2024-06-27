@@ -22,6 +22,11 @@ class Word
         _isVisible = false;
     }
 
+    
+    
+    
+    
+    
     // public void HideThreeWords()
     // {
     //     Random random = _words.Where(Word => Word.IsVisible).ToList();
