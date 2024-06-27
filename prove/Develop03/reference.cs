@@ -6,13 +6,15 @@ class Reference
     public Reference(string book, string verse)
     {
         _book = book;
-        _verse - verse;
+        _verse = verse;
     }
 
-    public override string ToString()
+    public void DisplayReference()
     {
-        return $"{book} {verse}";
+        Console.WriteLine($"{_book} {_verse}");
     }
+
+
 }
 
 // Reference()

@@ -6,37 +6,39 @@ class Scripture{
     public Scripture(Reference reference, string text)
     {
         _reference = reference;
-        _words = text.Split(' ').Select(_words => new Word(word)).ToList();
+        _words = text.Split(' ').Select(word => new Word(word)).ToList();
 
     }
 
     public void Display()
     {
-        Console.WriteLine(_reference);
+        _reference.DisplayReference();
         foreach (Word word in _words)
         {
-            Console.WriteLine(word);
+            word.DisplayWord();
+            Console.Write(" ");
         }
+        Console.WriteLine();
     }
 
-    public bool HideWords()
-    {
-        Random random = new Random();
-        List<_words> wordsToHide = _words.Where(wordsToHide => !wordsToHide.IsHidden).ToList();
-        if (visibleWords.Count == 0)
-        {
-            return false;
-        }
+    // public bool HideWords()
+    // {
+    //     Random random = new Random();
+    //     List<_words> wordsToHide = _words.Where(wordsToHide => !wordsToHide.IsHidden).ToList();
+    //     if (visibleWords.Count == 0)
+    //     {
+    //         return false;
+    //     }
 
-        int wordsToHide = Math.Min(3, visibleWords.Count);
-        for (int i =0; i < wordsToHide; i++)
-        {
-            Word wordToHide = visibleWords[random.Next(visibleWords.Count)];
-            wordToHide.Hide();
-            visibleWords.Remove(wordToHide);
-        }
-        return true;
-    }
+    //     int wordsToHide = Math.Min(3, visibleWords.Count);
+    //     for (int i =0; i < wordsToHide; i++)
+    //     {
+    //         Word wordToHide = visibleWords[random.Next(visibleWords.Count)];
+    //         wordToHide.Hide();
+    //         visibleWords.Remove(wordToHide);
+    //     }
+    //     return true;
+    // }
 }
 
 // Scripture()

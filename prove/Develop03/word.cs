@@ -1,23 +1,34 @@
 class Word
 {
-    private string _text;
-    public bool IsHidden { get; private set; }
+    private string _word;
+    private bool _isVisible;
 
-    public Word(string text)
+    public Word(string word)
     {
-        _text = text;
-        IsHidden = false;
+        _word = word;
+        _isVisible = true;
+    }
+
+    public void DisplayWord() 
+    {
+        Console.Write(_word);
     }
 
     public void Hide()
     {
-        IsHidden = true;
+        _isVisible = false;
     }
-
-    public override string ToString()
-    {
-        return IsHidden ? "_____" : _text;
-    }
+    // public override string ToString()
+    // {
+    //     if (_isVisible)
+    //     {
+    //         return new string('_', _word.Length);
+    //     }
+    //     else
+    //     {
+    //         return _word;
+    //     }
+    // }
 }
 
 // CreateWord()

@@ -23,12 +23,12 @@ class Program
             {
                 break;
             }
-            else{
-                if (!scripture.HideWords())
-                {
-                    break;
-                }
-            }
+            // else{
+            //     if (!scripture.HideWords())
+            //     {
+            //         break;
+            //     }
+            // }
         }
         Console.WriteLine("Congratulations! You have removed all the words and memorized the scripture. ");
         // DisplayMenu()
