@@ -9,51 +9,30 @@ class Word
         _isVisible = true;
     }
 
-    public void DisplayWord() 
+    public void DisplayWord()
     {
-       
-        Console.Write(_word);
-        
-        
+        if (_isVisible)
+        {
+            Console.Write(_word);
+        }
+        else
+        {
+            Console.Write(new string('_', _word.Length));
+        }
     }
 
-    public void Hide()
+    public void HideWord()
     {
         _isVisible = false;
     }
 
-    
-    
-    
-    
-    
-    // public void HideThreeWords()
-    // {
-    //     Random random = _words.Where(Word => Word.IsVisible).ToList();
+    public bool IsVisible()
+    {
+        return _isVisible;
+    }
 
-    //     for (int i = 0; i < Math.Min(3, visibleWords.Count); i++)
-    //     {
-    //         int indexToHide = random.Next(visibleWords.Count);
-    //         visibleWords[indexToHide].ToggleVisiblility();
-    //         visibleWords.RemoveAt(indexToHide);
-    //     }
-    // }
-
-
-    // public override string ToString()
-    // {
-    //     if (_isVisible)
-    //     {
-    //         return new string('_', _word.Length);
-    //     }
-    //     else
-    //     {
-    //         return _word;
-    //     }
-    // }
+        public void RevealWord()
+    {
+        _isVisible = true;
+    }
 }
-
-// CreateWord()
-// // Get and Set
-
-// DisplayWord()
