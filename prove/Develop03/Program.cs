@@ -8,12 +8,13 @@ class Program
         string text = "And it came to pass that I, Nephi, said unto my father: I will go and do the things which the Lord hath commanded, for I know that the Lord giveth no commandments unto the children of men, save he shall prepare a way for them that they may accomplish the thing which he commandeth them.";
 
         Scripture scripture = new Scripture(reference, text);
-        Console.WriteLine("Welcome to the Scripture Memorization Program!");
+        Console.WriteLine("Welcome to the Scripture Memorization Program!\n");
 
         Console.WriteLine("Choose difficulty level:");
         Console.WriteLine("1. Easy (Hide one word at a time)");
         Console.WriteLine("2. Medium (Hide three words at a time)");
         Console.WriteLine("3. Hard (Hide six words at a time)");
+        Console.WriteLine("4. Legendary (All words are hidden from the start!)");
         Console.Write("Enter your choice (1, 2, 3, 4): ");
 
         int choice;
@@ -64,7 +65,7 @@ class Program
             {
                 Console.Clear();
                 scripture.Display();
-                Console.WriteLine("Congratulations! You have removed all the words and memorized the scripture.");
+                Console.WriteLine("\nCongratulations! You have removed all the words and memorized the scripture.\n");
                 break;
             }
         }

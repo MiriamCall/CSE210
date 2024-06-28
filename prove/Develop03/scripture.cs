@@ -13,6 +13,7 @@ class Scripture
 
     public void Display()
     {
+        Console.WriteLine("======================================================================================================================================");
         _reference.DisplayReference();
         foreach (Word word in _words)
         {
@@ -20,6 +21,8 @@ class Scripture
             Console.Write(" ");
         }
         Console.WriteLine();
+        Console.WriteLine("======================================================================================================================================");
+
     }
 
     public void HideAllWords()
