@@ -10,6 +10,6 @@ public class WritingAssignment : Assignment
     public string GetWritingInformation()
     {
         string name = GetName();
-        return $"{name} by {title}";
+        return $"{_title} by {name}";
     }
 }

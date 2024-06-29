@@ -11,8 +11,8 @@ class Program
         Console.WriteLine(a2.GetSummary());
         Console.WriteLine(a2.GetHomeWork());
 
-        // WritingAssignment a3 = new WritingAssignment("Lily" , "Poetry", "The Road Not Taken");
-        // Console.WriteLine(a3.GetSummary());
-        // Console.WriteLine(a3.GetWritingInformation());
+        WritingAssignment a3 = new WritingAssignment("Lily" , "Poetry", "The Road Not Taken");
+        Console.WriteLine(a3.GetSummary());
+        Console.WriteLine(a3.GetWritingInformation());
     }
 }
