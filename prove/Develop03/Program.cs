@@ -1,3 +1,23 @@
+/*******************************************************************************************
+* Source Program:
+*   Scripture Memorization App
+* Source Files:
+*   Program.cs, Scripture.cs, Reference.cs, Word.cs
+* Author:
+*    Miriam Call
+* Assistance:
+*    Brother Godderidge, Grant Call, GitHub Copilot
+* Summary:
+*    The Scripture Memorization App helps users memorize scriptures by progressively
+*    hiding words based on selected difficulty, Easy, Medium, Hard, and Legendary.
+*    Users are presented with a scripture and words are hidden as they progress, promoting
+*    memorization through repetition and recall. The process continues until the user
+*    quits or memorizes the scripture fully, receiving a congratulatory message. This
+*    method leverages active recall and spaced repetition, enhancing memorization.
+* Extra Enhancements:
+*    - Added levels of difficulty: Easy, Medium, Hard, and Legendary
+*********************************************************************************************/
+
 using System;
 
 class Program

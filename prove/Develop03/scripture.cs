@@ -48,6 +48,7 @@ class Scripture
             for (int i = 0; i < wordsToHide; i++)
             {
                 int index = _random.Next(visibleWords.Count);
+                // 
                 visibleWords[index].HideWord();
                 // Remove the word from the list to avoid hiding it again
                 visibleWords.RemoveAt(index);
