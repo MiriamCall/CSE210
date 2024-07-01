@@ -5,16 +5,19 @@ class Program
 {
     static void Main()
     {
-        Console.WriteLine("Hello, World!");
-        
-        Circle myCircle = new Circle(10);
-        Console.WriteLine($"{myCircle.GetArea()}");
+        Console.WriteLine("Hello World!");
 
-        Circle unitCircle = new Circle(1);
-        Console.WriteLine($"{unitCircle.GetCircumference()}");
-        Console.WriteLine($"{unitCircle.GetDiameter()}");
+        Person person1 = new Person("John", "Doe", 30, 180);
+
+        Console.WriteLine(person1.PersonInformation());
+
+        Fireman fireman1 = new Fireman("Firefighter", "Jane", "Doe", 25, 150);
+
+        Console.WriteLine(fireman1.PersonInformation());
+        Console.WriteLine(fireman1.FiremanInformation());
+
+        Police police1 = new Police("Taser and Club", "Jack", "Doe", 35, 200);
+        Console.WriteLine(police1.PersonInformation());
+        Console.WriteLine(police1.PoliceInformation());
     }
-
-
-
 }
